@@ -27,6 +27,7 @@ list(APPEND PLUGIN_SOURCES
 add_library(${PLUGIN_NAME} SHARED
   "include/flutter_timezone_plus/flutter_timezone_plus_plugin_c_api.h"
   "flutter_timezone_plus_plugin_c_api.cpp"
+  "include/strconv.h"
   ${PLUGIN_SOURCES}
 )
 

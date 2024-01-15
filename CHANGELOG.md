@@ -1,3 +1,7 @@
+## 1.0.9
+
+Added windows method calls.
+
 ## 1.0.8
 
 - Fork [flutter_timezone](https://github.com/tjarvstrand/flutter_timezone)
