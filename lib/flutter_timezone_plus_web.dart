@@ -1,3 +1,5 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import 'dart:async';
 
 import 'package:flutter/services.dart';
@@ -11,7 +13,7 @@ import 'package:js/js.dart';
 class FlutterTimezonePlugin {
   static void registerWith(Registrar registrar) {
     final MethodChannel channel = MethodChannel(
-      'flutter_timezone',
+      'flutter_timezone_plus',
       const StandardMethodCodec(),
       registrar,
     );

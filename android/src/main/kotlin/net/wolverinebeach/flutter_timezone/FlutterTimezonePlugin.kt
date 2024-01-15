@@ -61,7 +61,7 @@ class FlutterTimezonePlugin : FlutterPlugin, MethodCallHandler {
     }
 
     private fun setupMethodChannel(messenger: BinaryMessenger) {
-        channel = MethodChannel(messenger, "flutter_timezone")
+        channel = MethodChannel(messenger, "flutter_timezone_plus")
         channel.setMethodCallHandler(this)
     }
 }

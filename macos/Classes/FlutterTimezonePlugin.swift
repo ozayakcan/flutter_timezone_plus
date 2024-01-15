@@ -3,7 +3,7 @@ import FlutterMacOS
 
 public class FlutterTimezonePlugin: NSObject, FlutterPlugin {
   public static func register(with registrar: FlutterPluginRegistrar) {
-    let channel = FlutterMethodChannel(name: "flutter_timezone", binaryMessenger: registrar.messenger)
+    let channel = FlutterMethodChannel(name: "flutter_timezone_plus", binaryMessenger: registrar.messenger)
     let instance = FlutterTimezonePlugin()
     registrar.addMethodCallDelegate(instance, channel: channel)
   }

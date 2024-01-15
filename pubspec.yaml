@@ -1,7 +1,7 @@
-name: flutter_timezone
-description: A flutter plugin for getting the local timezone of the device.
+name: flutter_timezone_plus
+description: A fork of https://pub.dev/packages/flutter_timezone that works on windows and linux
 version: 1.0.8
-homepage: https://github.com/tjarvstrand/flutter_timezone
+homepage: https://github.com/ozayakcan/flutter_timezone_plus
 
 environment:
   sdk: '>=2.12.0 <4.0.0'
@@ -17,6 +17,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_lints: ^2.0.0
 
 
 # The following section is specific to Flutter.
@@ -30,6 +31,8 @@ flutter:
         pluginClass: FlutterTimezonePlugin
       macos:
         pluginClass: FlutterTimezonePlugin
+      #windows:
+      #  pluginClass: FlutterTimezonesPluginCApi
       web:
         pluginClass: FlutterTimezonePlugin
-        fileName: flutter_timezone_web.dart
+        fileName: flutter_timezone_plus_web.dart

@@ -3,7 +3,7 @@
 @implementation FlutterTimezonePlugin
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
   FlutterMethodChannel* channel = [FlutterMethodChannel
-      methodChannelWithName:@"flutter_timezone"
+      methodChannelWithName:@"flutter_timezone_plus"
             binaryMessenger:[registrar messenger]];
   FlutterTimezonePlugin* instance = [[FlutterTimezonePlugin alloc] init];
   [registrar addMethodCallDelegate:instance channel:channel];

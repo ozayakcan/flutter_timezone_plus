@@ -1,16 +1,30 @@
 import 'dart:async';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_timezone/flutter_timezone.dart';
+import 'package:flutter_timezone_plus/flutter_timezone_plus.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
-class MyApp extends StatefulWidget {
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
-  _MyAppState createState() => _MyAppState();
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      home: HomePage(),
+    );
+  }
 }
 
-class _MyAppState extends State<MyApp> {
+class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   String _timezone = 'Unknown';
   List<String> _availableTimezones = <String>[];
 
@@ -24,13 +38,17 @@ class _MyAppState extends State<MyApp> {
     try {
       _timezone = await FlutterTimezone.getLocalTimezone();
     } catch (e) {
-      print('Could not get the local timezone');
+      if (kDebugMode) {
+        print('Could not get the local timezone');
+      }
     }
     try {
       _availableTimezones = await FlutterTimezone.getAvailableTimezones();
       _availableTimezones.sort();
     } catch (e) {
-      print('Could not get available timezones');
+      if (kDebugMode) {
+        print('Could not get available timezones');
+      }
     }
     if (mounted) {
       setState(() {});
@@ -39,23 +57,21 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Local timezone app'),
-        ),
-        body: Column(
-          children: <Widget>[
-            Text('Local timezone: $_timezone\n'),
-            Text('Available timezones:'),
-            Expanded(
-              child: ListView.builder(
-                itemCount: _availableTimezones.length,
-                itemBuilder: (_, index) => Text(_availableTimezones[index]),
-              ),
-            )
-          ],
-        ),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Local timezone app'),
+      ),
+      body: Column(
+        children: <Widget>[
+          Text('Local timezone: $_timezone\n'),
+          const Text('Available timezones:'),
+          Expanded(
+            child: ListView.builder(
+              itemCount: _availableTimezones.length,
+              itemBuilder: (_, index) => Text(_availableTimezones[index]),
+            ),
+          )
+        ],
       ),
     );
   }

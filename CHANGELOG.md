@@ -1,5 +1,7 @@
 ## 1.0.8
 
+- Fork [flutter_timezone](https://github.com/tjarvstrand/flutter_timezone)
+
 Android:
  - Bump Kotlin version to 1.6.21. Fixes [#15](https://github.com/tjarvstrand/flutter_timezone/issues/15).
 
