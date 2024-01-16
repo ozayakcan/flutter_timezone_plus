@@ -25,18 +25,19 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  String _timezone = 'Unknown';
+  String? _timezone;
   List<String> _availableTimezones = <String>[];
 
   @override
   void initState() {
-    super.initState();
     _initData();
+    super.initState();
   }
 
   Future<void> _initData() async {
     try {
       _timezone = await FlutterTimezone.getLocalTimezone();
+      _timezone ??= 'Unknown';
     } catch (e) {
       if (kDebugMode) {
         print(e);

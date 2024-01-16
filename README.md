@@ -9,7 +9,8 @@ A fork of [flutter_timezone](https://github.com/tjarvstrand/flutter_timezone) wo
 Current timezone:
 
 ```dart
-final String currentTimeZone = await FlutterTimezone.getLocalTimezone();
+// Returns null if timezone not found on windows or linux.
+final String? currentTimeZone = await FlutterTimezone.getLocalTimezone();
 ```
 
 All available timezones:

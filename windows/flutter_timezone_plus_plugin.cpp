@@ -47,8 +47,12 @@ void FlutterTimezonePlusPlugin::HandleMethodCall(
     std::unique_ptr<flutter::MethodResult<flutter::EncodableValue>> result) {
     if (method_call.method_name().compare("getLocalTimezone") == 0)
     {
-        std::string standartName = TimeZones::IANA();
-        result->Success(flutter::EncodableValue(standartName));
+        std::string tzName = TimeZones::IANA();
+        if(tzName == "Unknown"){
+            result->Success(nullptr);
+        }else{
+            result->Success(flutter::EncodableValue(tzName));
+        }
     }
     else if (method_call.method_name().compare("getAvailableTimezones") == 0)
     {

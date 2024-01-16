@@ -1,3 +1,7 @@
+## 1.1.0
+
+*getLocalTimezone()* now can return null if timezone not found on windows and linux.
+
 ## 1.0.10
 
 Enable linux support. (Tested only on Ubuntu)

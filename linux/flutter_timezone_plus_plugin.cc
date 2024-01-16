@@ -46,11 +46,13 @@ static void flutter_timezone_plus_plugin_handle_method_call(
 
 FlMethodResponse* get_local_timezone() {
   char tz[128];
-  g_autofree gchar *ltz = g_strdup_printf("%s", "Unknown");
-  if (findDefaultTZ(tz, sizeof(tz)))
-    ltz = g_strdup_printf("%s", tz);
-  g_autoptr(FlValue) mtz = fl_value_new_string(ltz);
-  return FL_METHOD_RESPONSE(fl_method_success_response_new(mtz));
+  if (findDefaultTZ(tz, sizeof(tz))){
+    g_autofree gchar *ltz = g_strdup_printf("%s", tz);
+    g_autoptr(FlValue) mtz = fl_value_new_string(ltz);
+    return FL_METHOD_RESPONSE(fl_method_success_response_new(mtz));
+  }else{
+    return FL_METHOD_RESPONSE(fl_method_success_response_new(nullptr));
+  }
 }
 FlMethodResponse* get_available_timezones() {
   char tz[128];
@@ -71,9 +73,9 @@ FlMethodResponse* get_available_timezones() {
       g_autofree gchar *ltz = g_strdup_printf("%s", trim(path));
       fl_value_append_take(out, fl_value_new_string(ltz));
     }
+    /* close */
+    pclose(fp);
   }
-  /* close */
-  pclose(fp);
   
   return FL_METHOD_RESPONSE(fl_method_success_response_new(out));
 }

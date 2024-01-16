@@ -11,12 +11,9 @@ class FlutterTimezone {
   ///
   /// Returns local timezone from the native layer.
   ///
-  static Future<String> getLocalTimezone() async {
+  static Future<String?> getLocalTimezone() async {
     final String? localTimezone =
         await _channel.invokeMethod("getLocalTimezone");
-    if (localTimezone == null) {
-      throw ArgumentError("Invalid return from platform getLocalTimezone()");
-    }
     return localTimezone;
   }
 
