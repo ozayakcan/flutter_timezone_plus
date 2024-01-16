@@ -5,8 +5,17 @@ A fork of [flutter_timezone](https://github.com/tjarvstrand/flutter_timezone) wo
 ## Usage examples
 
 ### Get the timezone
+
+Current timezone:
+
 ```dart
 final String currentTimeZone = await FlutterTimezone.getLocalTimezone();
+```
+
+All available timezones:
+
+```dart
+final List<String> availableTimezones = await FlutterTimezone.getAvailableTimezones();
 ```
 
 ## Reference
