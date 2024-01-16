@@ -1,6 +1,6 @@
 # flutter_timezone_plus
 
-A fork of [flutter_timezone](https://github.com/tjarvstrand/flutter_timezone) that works on windows and linux
+A fork of [flutter_timezone](https://github.com/tjarvstrand/flutter_timezone) works on windows and linux
 
 ## Usage examples
 

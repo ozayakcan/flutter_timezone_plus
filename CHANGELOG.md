@@ -1,6 +1,6 @@
 ## 1.0.9
 
-Added windows method calls.
+Added windows support.
 
 ## 1.0.8
 

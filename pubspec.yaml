@@ -1,5 +1,5 @@
 name: flutter_timezone_plus
-description: A fork of https://pub.dev/packages/flutter_timezone that works on windows and linux
+description: A fork of https://pub.dev/packages/flutter_timezone works on windows and linux
 version: 1.0.9
 homepage: https://github.com/ozayakcan/flutter_timezone_plus
 
