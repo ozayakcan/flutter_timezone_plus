@@ -39,6 +39,7 @@ class _HomePageState extends State<HomePage> {
       _timezone = await FlutterTimezone.getLocalTimezone();
     } catch (e) {
       if (kDebugMode) {
+        print(e);
         print('Could not get the local timezone');
       }
     }
@@ -47,6 +48,7 @@ class _HomePageState extends State<HomePage> {
       _availableTimezones.sort();
     } catch (e) {
       if (kDebugMode) {
+        print(e);
         print('Could not get available timezones');
       }
     }
