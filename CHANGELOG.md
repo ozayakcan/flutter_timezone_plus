@@ -1,3 +1,7 @@
+## 1.0.10
+
+Added linux support.
+
 ## 1.0.9
 
 Added windows support.

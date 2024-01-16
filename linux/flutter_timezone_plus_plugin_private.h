@@ -7,4 +7,8 @@
 // in the unit-testable API.
 
 // Handles the getPlatformVersion method call.
-FlMethodResponse *get_platform_version();
+FlMethodResponse *get_local_timezone();
+FlMethodResponse *get_available_timezones();
+char *findDefaultTZ(char *tz, size_t tzSize);
+char *getValue(char *filename, char *tag, char *value, size_t valueSize);
+char *trim(char *string);
