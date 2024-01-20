@@ -1,17 +1,18 @@
 #
 # To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html.
-# Run `pod lib lint flutter_timezone.podspec' to validate before publishing.
+# Run `pod lib lint flutter_timezone_plus.podspec` to validate before publishing.
 #
 Pod::Spec.new do |s|
-  s.name             = 'flutter_timezone'
-  s.version          = '0.1.0'
-  s.summary          = 'A new flutter plugin project.'
+  s.name             = 'flutter_timezone_plus'
+  s.version          = '0.0.1'
+  s.summary          = 'A native timezone project.'
   s.description      = <<-DESC
-A new flutter plugin project.
+  Get the native timezone from macos.
                        DESC
-  s.homepage         = 'http://example.com'
+  s.homepage         = 'https://github.com/ozayakcan/flutter_timezone_plus'
   s.license          = { :file => '../LICENSE' }
-  s.author           = { 'Your Company' => 'email@example.com' }
+  s.author           = { 'Ozay Akcan' => 'mail@ozayakcan.com.tr' }
+
   s.source           = { :path => '.' }
   s.source_files     = 'Classes/**/*'
   s.dependency 'FlutterMacOS'

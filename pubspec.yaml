@@ -1,6 +1,6 @@
 name: flutter_timezone_plus
 description: A fork of https://pub.dev/packages/flutter_timezone works on windows and linux
-version: 1.1.0
+version: 1.1.1
 homepage: https://github.com/ozayakcan/flutter_timezone_plus
 
 environment:
@@ -25,12 +25,12 @@ flutter:
   plugin:
     platforms:
       android:
-        package: net.wolverinebeach.flutter_timezone
-        pluginClass: FlutterTimezonePlugin
+        package: com.ozayakcan.flutter_timezone_plus
+        pluginClass: FlutterTimezonePlusPlugin
       ios:
-        pluginClass: FlutterTimezonePlugin
+        pluginClass: FlutterTimezonePlusPlugin
       macos:
-        pluginClass: FlutterTimezonePlugin
+        pluginClass: FlutterTimezonePlusPlugin
       web:
         pluginClass: FlutterTimezonePlugin
         fileName: flutter_timezone_plus_web.dart

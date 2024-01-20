@@ -1,3 +1,7 @@
+## 1.1.1
+
+Updated plugin class names on all platforms.
+
 ## 1.1.0
 
 *getLocalTimezone()* now can return null if timezone not found on windows and linux.

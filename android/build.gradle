@@ -1,4 +1,4 @@
-group 'net.wolverinebeach.flutter_timezone'
+group 'com.ozayakcan.flutter_timezone_plus'
 version '1.0-SNAPSHOT'
 
 buildscript {
@@ -25,7 +25,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    namespace 'net.wolverinebeach.flutter_timezone'
+    namespace 'com.ozayakcan.flutter_timezone_plus'
     compileSdkVersion 33
 
     sourceSets {
