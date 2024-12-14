@@ -1,3 +1,7 @@
+## 1.1.2
+
+Fix getLocalTimezone can return bool on windows build.
+
 ## 1.1.1
 
 Updated plugin class names on all platforms.

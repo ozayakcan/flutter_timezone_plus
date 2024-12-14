@@ -14,6 +14,8 @@ class FlutterTimezone {
   static Future<String?> getLocalTimezone() async {
     final String? localTimezone =
         await _channel.invokeMethod("getLocalTimezone");
+    if (localTimezone != null && localTimezone.toLowerCase() == "unknown")
+      return null;
     return localTimezone;
   }
 
