@@ -12,6 +12,7 @@
 
 #include <memory>
 #include <sstream>
+#include <fstream>
 
 #include "include/strconv.h"
 #include <winrt/Windows.Data.Xml.Dom.h>
@@ -61,9 +62,9 @@ void FlutterTimezonePlusPlugin::HandleMethodCall(
     }
 }
 std::string TimeZones::Standart() {
-    TIME_ZONE_INFORMATION timeZoneInfo;
-    GetTimeZoneInformation(&timeZoneInfo);
-    std::string tzName = wide_to_utf8(timeZoneInfo.StandardName);
+    DYNAMIC_TIME_ZONE_INFORMATION timeZoneInfo;
+    GetDynamicTimeZoneInformation(&timeZoneInfo);
+    std::string tzName = wide_to_utf8(timeZoneInfo.TimeZoneKeyName);
     return tzName;
 }
 std::string TimeZones::CountryCode() {

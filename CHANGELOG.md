@@ -1,3 +1,7 @@
+## 1.1.3
+
+Fix timezone returns null on Non-English Windows
+
 ## 1.1.2
 
 Fix getLocalTimezone can return bool on windows build.
