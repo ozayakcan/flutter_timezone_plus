@@ -1,5 +1,7 @@
 # flutter_timezone_plus
 
+[![pub package](https://img.shields.io/pub/v/flutter_timezone_plus.svg)](https://pub.dartlang.org/packages/flutter_timezone_plus)
+
 A fork of [flutter_timezone](https://github.com/tjarvstrand/flutter_timezone) works on windows and linux
 
 ## Usage examples
